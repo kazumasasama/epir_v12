@@ -23,3 +23,69 @@ puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
 puma (3.12.6) lib/puma/server.rb:476:in `process_client'
 puma (3.12.6) lib/puma/server.rb:334:in `block in run'
 puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/rails/info/routes" for ::1 at 2021-10-28 19:33:38 -0400
+  
+SyntaxError (/Users/Ktie/Projects/epir_v12/config/routes.rb:3: syntax error, unexpected local variable or method, expecting `end'
+    resources :users only: [:index, :show]
+                     ^~~~
+/Users/Ktie/Projects/epir_v12/config/routes.rb:4: syntax error, unexpected `end', expecting end-of-input
+  end
+  ^~~
+):
+  
+config/routes.rb:3: syntax error, unexpected local variable or method, expecting `end'
+config/routes.rb:4: syntax error, unexpected `end', expecting end-of-input
+Started GET "/rails/info/routes" for ::1 at 2021-10-28 19:34:25 -0400
+Processing by Rails::InfoController#routes as HTML
+  Rendering /Users/Ktie/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/railties-5.2.6/lib/rails/templates/rails/info/routes.html.erb within layouts/application
+  Rendered collection of /Users/Ktie/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/actionpack-5.2.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb [7 times] (4.6ms)
+  Rendered /Users/Ktie/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/actionpack-5.2.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (5.8ms)
+  Rendered /Users/Ktie/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/railties-5.2.6/lib/rails/templates/rails/info/routes.html.erb within layouts/application (13.4ms)
+Completed 200 OK in 17ms (Views: 15.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rails/info/routes" for ::1 at 2021-10-28 19:45:42 -0400
+Processing by Rails::InfoController#routes as HTML
+  Rendering /Users/Ktie/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/railties-5.2.6/lib/rails/templates/rails/info/routes.html.erb within layouts/application
+  Rendered collection of /Users/Ktie/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/actionpack-5.2.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb [7 times] (2.0ms)
+  Rendered /Users/Ktie/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/actionpack-5.2.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (3.9ms)
+  Rendered /Users/Ktie/.rbenv/versions/2.7.4/lib/ruby/gems/2.7.0/gems/railties-5.2.6/lib/rails/templates/rails/info/routes.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 14ms (Views: 13.0ms | ActiveRecord: 0.0ms)
+
+
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ bin/rails:9
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:9
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateUsers (20211028235454)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateUsers (20211028235454)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ db/migrate/20211028235454_create_users.rb:3
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar, "last_name" varchar, "email" varchar NOT NULL, "password_digest" varchar NOT NULL, "phone" varchar, "line_id" varchar, "birthday" date, "gender" varchar, "zip" varchar, "prefecture" varchar, "address" varchar, "memo" text, "customer_note" text, "vip" boolean, "danger" boolean, "event_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20211028235454_create_users.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20211028235454"]]
+  ↳ bin/rails:9
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2021-10-29 00:03:14.046952"], ["updated_at", "2021-10-29 00:03:14.046952"]]
+  ↳ bin/rails:9
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
