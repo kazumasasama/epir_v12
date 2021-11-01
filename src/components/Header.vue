@@ -109,7 +109,7 @@ export default {
           icon: 'mdi-cog-outline',
           lists:[
             { name: 'アカウント詳細', link: '/myaccount' },
-            { name: 'スタッフ管理', link: '/settings/staff' },
+            { name: 'スタッフ管理', link: '/admins' },
             { name: 'メニュー管理', link: '/settings/menu' }
           ]
         },
@@ -124,7 +124,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="scss">
 .font-color {
   color: rgb(77, 77, 77);
 }
@@ -141,5 +141,8 @@ export default {
 }
 .logo {
   margin-left: 30px;
+}
+.v-main__wrap {
+  background-color: rgb(250, 250, 250);
 }
 </style>

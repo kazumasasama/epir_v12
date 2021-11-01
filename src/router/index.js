@@ -1,14 +1,38 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
+import PageNotFound from '@/views/PageNotFound.vue'
 import Home from '@/views/Home.vue'
+import MyAccount from '@/views/MyAccount.vue'
+import UserIndex from '@/views/user/UserIndex.vue'
+import AdminIndex from '@/views/admin/AdminIndex.vue'
 
 Vue.use(VueRouter)
 
 const routes = [
   {
+    path: '*',
+    name: '404',
+    component: PageNotFound
+  },
+  {
     path: '/',
     name: 'Home',
     component: Home
+  },
+  {
+    path: '/admins',
+    name: 'AdminIndex',
+    component: AdminIndex
+  },
+  {
+    path: '/myaccount',
+    name: 'MyAccount',
+    component: MyAccount
+  },
+  {
+    path: '/users',
+    name: 'UserIndex',
+    component: UserIndex
   },
   {
     path: '/about',

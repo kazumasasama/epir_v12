@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  namespace :v1 do
+  namespace :api do
+    # resources :admins, only: [:index, :show]
     resources :users, only: [:index, :show]
   end
 end
